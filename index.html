@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        #content {
+            display: none;
+            text-align: center;
+        }
+        #question {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">
+        <h2>请输入答案以查看内容</h2>
+        <input type="text" id="answer" placeholder="我的曾用名是什么？">
+        <button onclick="checkAnswer()">提交</button>
+    </div>
+    <div id="content">
+        <p>我要去复读了，又是艰苦的一年，这都是我逃避现实的报应，既然你知道我曾用名，最起码应该是个跟我有一定接触的男性，希望明年我再次出现在你面前的时候不会因为我还停留在高中的行为而厌恶，比如见面就操你妈，虽然那时候可能我们就不熟了。无论如何，希望你一直都好，这一切只是我在半夜睡不着觉突发奇想写的一些文字，可能很弱智，不过我还是希望大家一切都好，虽然可能根本没人看到这些字，不是我不会去爱别人，只是好像从来就没有人爱过我，我知道多年以后再看会认为是黑历史，只不过我现在的水平只能让我总结出这样一句话，加油，同志们，明天的世界是我们的！</p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            const correctAnswer = "李多宇"; // 替换为你的曾用名
+            if (answer === correctAnswer) {
+                document.getElementById('question').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('答案错误，请重试。');
+            }
+        }
+    </script>
+</body>
+</html>
