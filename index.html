@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+        }
+        #content {
+            display: none;
+        }
+        #access {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            if (answer === '李多宇') {
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('access').style.display = 'none';
+            } else {
+                alert('回答错误，请再试一次。');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="access">
+        <label for="answer">请输入我的曾用名：</label>
+        <input type="text" id="answer" />
+        <button onclick="checkAnswer()">提交</button>
+    </div>
+    <div id="content">
+        <p>同学，我要去复读了，我现在很难过，不是说为过去的失败而难过亦或是担忧明年是否会悲剧重演，我只是在想自己真的讨厌你们吗，或许不是，即使我不去复读，不少人也不知不觉中与我见完了人生中的最后一面，你们都成为了大学生，而我还是高中生，明年见到你们的时候请不要因为我还停在过去而蔑视我，我的青春是比你们多一年，但我的人生估计会比你们少一年吧，我也想为自己而活，但目前看来是做不到了，祝你们好梦，谢谢你们所有人，虽然我一直没有什么归属感，但起码我没有成为反社会的人物，我的确是sb，包括这些字，明年再看会很尴尬的吧，等我，谢谢，我爱你们，包括看见这些字的女生。</p>
+    </div>
+</body>
+</html>
