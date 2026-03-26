@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测测你的代表食物</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>测测你的代表食物</h2>
+    <input type="text" id="nameInput" placeholder="请输入姓名">
+    <button onclick="checkName()">提交</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkName() {
+            var name = document.getElementById("nameInput").value;
+            var result = document.getElementById("result");
+
+            if (name === "孙绮蔚") {
+                result.innerText = "你的代表食物是：生巧丸 🍫";
+            } else {
+                result.innerText = "你继续";
+            }
+        }
+    </script>
+
+</body>
+</html>
